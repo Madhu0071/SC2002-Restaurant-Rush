@@ -9,37 +9,53 @@ public class Order {
     private OrderStatus status;
 
     public Order(Customer customer, MenuItem item, int priceCents) {
-    }
-
-    public Customer getCustomer() {
-        return null;
-    }
-
-    public MenuItem getItem() {
-        return null;
-    }
-
-    public int getPriceCents() {
-        return 0;
+        this.customer = customer;
+        this.item = item;
+        this.priceCents = priceCents;
+        this.unitsDone = 0;
+        this.readyOnTurn = -1;
+        this.status = OrderStatus.PLACED;
     }
 
     public OrderStatus getStatus() {
-        return null;
+        return status;
     }
 
     public void advance(int turn) {
+        if (status != OrderStatus.PLACED && status != OrderStatus.COOKING){
+            return;
+        }
+
+        unitsDone++;
+        
+        if (unitsDone >= item.getPrepUnits()){
+            status = OrderStatus.READY;
+            readyOnTurn = turn;
+        }
+        else{
+            status = OrderStatus.COOKING;
+        }
     }
 
     public boolean isServable(int turn) {
-        return false;
+        return status == OrderStatus.READY && readyOnTurn < turn;
     }
 
     public void markServed() {
+        if (status == OrderStatus.READY){
+            status = OrderStatus.SERVED;
+        }
     }
 
     public void markPaid() {
+        if (status == OrderStatus.SERVED){
+            status = OrderStatus.PAID;
+        }
     }
 
     public void cancel() {
+        if (status == OrderStatus.PLACED || status == OrderStatus.COOKING || status == OrderStatus.READY){
+            status = OrderStatus.CANCELLED;
+        }
     }
 }
