@@ -5,21 +5,23 @@ public class ValidationResult {
     private String message;
 
     private ValidationResult(boolean valid, String message) {
+        this.valid = valid;
+        this.message = message;
     }
 
     public static ValidationResult ok() {
-        return null;
+        return new ValidationResult(true, null);
     }
 
     public static ValidationResult fail(String msg) {
-        return null;
+        return new ValidationResult(false, msg);
     }
 
     public boolean isValid() {
-        return false;
+        return valid;
     }
 
     public String getMessage() {
-        return null;
+        return message;
     }
 }
