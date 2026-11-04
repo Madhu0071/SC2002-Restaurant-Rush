@@ -4,6 +4,7 @@ public class TakeOrderAction implements StaffAction {
     private Customer customer;
 
     public TakeOrderAction(Customer customer) {
+        this.customer = customer;
     }
 
     @Override
