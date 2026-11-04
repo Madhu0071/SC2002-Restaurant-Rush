@@ -135,6 +135,6 @@ public class GameController {
 
     public GameSnapshot snapshot() {
         return new GameSnapshot(turn, restaurant.getRevenueCents(), restaurant.averageSatisfaction(),
-                restaurant.getQueue(), restaurant.getTables(), restaurant.getCustomers(), 0);
+                restaurant.getQueue(), restaurant.getTables(), restaurant.getCustomers());
     }
 }
