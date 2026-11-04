@@ -11,17 +11,17 @@ public class SeatCustomerAction implements StaffAction {
 
     @Override
     public String describe() {
-        return "Seat Customer " + customer.getId();
+        return "Seat Customer " + customer.getId() + " at Table " + table.getId();
     }
 
     @Override
     public ValidationResult validate(Restaurant r, int turn) {
         if (customer.getState() != CustomerState.WAITING_IN_QUEUE){
-            return ValidationResult.fail("Customer is no longer waiting.");
+            return ValidationResult.fail("Customer " + customer.getId() + " is no longer waiting.");
         }
 
         if (!table.isFree()){
-            return ValidationResult.fail("Table is no longer free.");
+            return ValidationResult.fail("Table " + table.getId() + " is no longer free.");
         }
 
         return ValidationResult.ok();
@@ -29,6 +29,8 @@ public class SeatCustomerAction implements StaffAction {
 
     @Override
     public void execute(Restaurant r, int turn) {
-        return;
+        table.assign(customer);
+        customer.markSeated();
+        r.removeFromQueue(customer);
     }
 }
