@@ -28,7 +28,7 @@ public class Waiter extends Staff {
         }
 
         for (Customer customer : r.getCustomers()){
-            Order order = customer.getOrder()
+            Order order = customer.getOrder();
             if (order != null){
                 if (order.isServable(turn)){
                     actionsList.add(new ServeOrderAction(order));
