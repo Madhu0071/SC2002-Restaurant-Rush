@@ -10,25 +10,30 @@ public class TurnReport {
     private OptionalDouble avgSatisfaction;
 
     public TurnReport(int turn, int servedCount, int unhappyDepartures, int revenueCents, OptionalDouble avgSatisfaction) {
+        this.turn = turn;
+        this.servedCount = servedCount;
+        this.unhappyDepartures = unhappyDepartures;
+        this.revenueCents = revenueCents;
+        this.avgSatisfaction = avgSatisfaction;
     }
 
     public int getTurn() {
-        return 0;
+        return turn;
     }
 
     public int getServedCount() {
-        return 0;
+        return servedCount;
     }
 
     public int getUnhappyDepartures() {
-        return 0;
+        return unhappyDepartures;
     }
 
     public int getRevenueCents() {
-        return 0;
+        return revenueCents;
     }
 
     public OptionalDouble getAvgSatisfaction() {
-        return null;
+        return avgSatisfaction;
     }
 }

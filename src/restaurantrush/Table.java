@@ -5,23 +5,35 @@ public class Table {
     private Customer occupant;
 
     public Table(int id) {
+        this.id = id;
+        this.occupant = null;
     }
 
     public int getId() {
-        return 0;
+        return id;
     }
 
     public Customer getOccupant() {
-        return null;
+        return occupant;
     }
 
     public boolean isFree() {
-        return false;
+        return occupant == null;
     }
 
     public void assign(Customer c) {
+        if (!isFree()) {
+            throw new IllegalStateException("Table " + id + " is already occupied");
+        }
+        occupant = c;
     }
 
     public void release() {
+        occupant = null;
+    }
+
+    @Override
+    public String toString() {
+        return "Table " + id;
     }
 }
