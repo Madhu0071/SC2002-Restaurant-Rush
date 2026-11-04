@@ -17,6 +17,18 @@ public class Order {
         this.status = OrderStatus.PLACED;
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public MenuItem getItem() {
+        return item;
+    }
+
+    public int getPriceCents() {
+        return priceCents;
+    }
+
     public OrderStatus getStatus() {
         return status;
     }
