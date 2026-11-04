@@ -1,5 +1,6 @@
 package restaurantrush;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
@@ -8,13 +9,19 @@ public class ArrivalSchedule {
     private Map<Integer, Customer> arrivals;
 
     public ArrivalSchedule() {
+        arrivals = new HashMap<>();
+        int id = 1;
+        for (int turn : ARRIVAL_TURNS) {
+            arrivals.put(turn, create(id, turn));
+            id++;
+        }
     }
 
     private Customer create(int id, int turn) {
-        return null;
+        return new RegularCustomer(id, turn);
     }
 
     public Optional<Customer> arrivingOn(int turn) {
-        return null;
+        return Optional.ofNullable(arrivals.get(turn));
     }
 }
