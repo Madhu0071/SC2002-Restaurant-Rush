@@ -99,7 +99,32 @@ public class ScriptedInput implements ManagerInput {
             for (Customer customer : customers) {
                 System.out.println("\nCustomer #" + customer.getId());
                 System.out.println("Satisfaction: " + customer.getSatisfaction());
-                System.out.println("State: " + customer.getState());
+                System.out.print("State: ");
+                switch (customer.getState()) {
+                    case WAITING_IN_QUEUE:
+                        System.out.println("Waiting in queue");
+                        break;
+                    case SEATED:
+                        System.out.println("Seated");
+                        break;
+                    case ORDERED:
+                        System.out.println("Ordered");
+                        break;
+                    case EATING:
+                        System.out.println("Eating");
+                        break;
+                    case READY_TO_PAY:
+                        System.out.println("Ready to pay");
+                        break;
+                    case PAID:
+                        System.out.println("Paid");
+                        break;
+                    case LEFT_UNHAPPY:
+                        System.out.println("Left Unhappy");
+                        break;
+                    default:
+                        break;
+                }
                 if (customer.getOrder() != null) {
                     System.out.println("Order Status: " + customer.getOrder().getStatus());
                 } else { System.out.println("Order Status: No order yet."); }

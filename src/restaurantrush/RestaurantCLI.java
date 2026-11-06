@@ -85,7 +85,33 @@ public class RestaurantCLI implements ManagerInput {
             for (Customer customer : customers) {
                 out.println("\nCustomer #" + customer.getId());
                 out.println("Satisfaction: " + customer.getSatisfaction());
-                out.println("State: " + customer.getState());
+                out.print("State: ");
+                switch (customer.getState()) {
+                    case WAITING_IN_QUEUE:
+                        out.println("Waiting in queue");
+                        break;
+                    case SEATED:
+                        out.println("Seated");
+                        break;
+                    case ORDERED:
+                        out.println("Ordered");
+                        break;
+                    case EATING:
+                        out.println("Eating");
+                        break;
+                    case READY_TO_PAY:
+                        out.println("Ready to pay");
+                        break;
+                    case PAID:
+                        out.println("Paid");
+                        break;
+                    case LEFT_UNHAPPY:
+                        out.println("Left Unhappy");
+                        break;
+                    default:
+                        break;
+                }
+
                 if (customer.getOrder() != null) {
                     out.println("Order Status: " + customer.getOrder().getStatus());
                 } else { out.println("Order Status: No order yet."); }
