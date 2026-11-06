@@ -1,5 +1,4 @@
-package restaurantrush;
-
+/** Lifecycle states of a customer (exactly as in the class diagram). */
 public enum CustomerState {
     WAITING_IN_QUEUE,
     SEATED,
