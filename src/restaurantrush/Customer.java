@@ -16,7 +16,7 @@ import java.util.List;
 public abstract class Customer {
 
     private final int id;
-    private int satisfaction;
+    protected int satisfaction;
     private CustomerState state;
     private final int arrivalTurn;
     private int servedOnTurn;
@@ -153,23 +153,6 @@ public abstract class Customer {
             return;
         }
         satisfaction = clamp(satisfaction - waitLoss());
-    }
-
-    /** Raise satisfaction by the given points, up to 100. */
-    public void recover(int points) {
-        if (points < 0) {
-            throw new IllegalArgumentException("Recovery points must not be negative: " + points);
-        }
-        satisfaction = clamp(satisfaction + points);
-    }
-
-    /**
-     * Change satisfaction by a signed amount, kept within 0-100. Only for
-     * subclasses that react to service after being served (when
-     * loseSatisfaction() no longer applies).
-     */
-    protected void changeSatisfaction(int delta) {
-        satisfaction = clamp(satisfaction + delta);
     }
 
     private int clamp(int v) {
