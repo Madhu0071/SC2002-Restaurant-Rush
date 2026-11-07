@@ -53,15 +53,15 @@ public class RestaurantCLI implements ManagerInput {
         8. staff tasks available
         */
         out.println("\n============== START TURN " + snap.getTurn() + " ==============");
-        out.printf("Revenue: $%.2f%n", snap.getRevenueCents() / 100.0);
+        out.printf("REVENUE: $%.2f%n", snap.getRevenueCents() / 100.0);
         OptionalDouble avg = snap.getAvgSatisfaction();
         if (avg.isPresent()) {
-            out.printf("Average Paid Customers' Satisfaction: %.2f%n", avg.getAsDouble());
+            out.printf("AVERAGE PAID CUSTOMERS' SATISFACTION: %.2f%n", avg.getAsDouble());
         } else {
-            out.println("Average Paid Customers' Satisfaction: N/A");
+            out.println("AVERAGE PAID CUSTOMERS' SATISFACTION: N/A");
         }
 
-        out.println("WAITING QUEUE (Top customer = Front of queue):");
+        out.println("WAITING QUEUE (TOP CUSTOMER = FRONT OF QUEUE):");
         List<Customer> q = snap.getQueue();
         if (q.isEmpty()) {
             out.println("No waiting customers.");
@@ -77,15 +77,15 @@ public class RestaurantCLI implements ManagerInput {
             out.println("Table " + (i+1) + " - " + (tables.get(i).isFree() ? "FREE" : "OCCUPIED"));
         }
 
-        out.println("\n============== CUSTOMER STATUS ==============");
+        out.println("\n----EACH CUSTOMER'S SATISFACTION AND STATUS----");
         List<Customer> customers = snap.getCustomers();
         if (customers.isEmpty()) {
             out.println("No customers available.");
         } else {
             for (Customer customer : customers) {
                 out.println("\nCustomer #" + customer.getId());
-                out.println("Satisfaction: " + customer.getSatisfaction());
-                out.print("State: ");
+                out.println("SATISFACTION: " + customer.getSatisfaction());
+                out.print("STATE: ");
                 switch (customer.getState()) {
                     case WAITING_IN_QUEUE:
                         out.println("Waiting in queue");
@@ -113,8 +113,8 @@ public class RestaurantCLI implements ManagerInput {
                 }
 
                 if (customer.getOrder() != null) {
-                    out.println("Order Status: " + customer.getOrder().getStatus());
-                } else { out.println("Order Status: No order yet."); }
+                    out.println("ORDER STATUS: " + customer.getOrder().getStatus());
+                } else { out.println("ORDER STATUS: No order yet."); }
             }
         }
     }
@@ -129,28 +129,28 @@ public class RestaurantCLI implements ManagerInput {
         5. turns used
         */
         out.println("\n============== END OF TURN " + r.getTurn() + " ==============");
-        out.println("Total Customers Served: " + r.getServedCount());
-        out.println("Total Unhappy Departures: " + r.getUnhappyDepartures());
-        out.printf("Revenue: $%.2f%n", r.getRevenueCents() / 100.0);
+        out.println("TOTAL CUSTOMERS SERVED: " + r.getServedCount());
+        out.println("TOTAL UNHAPPY DEPARTURES: " + r.getUnhappyDepartures());
+        out.printf("REVENUE: $%.2f%n", r.getRevenueCents() / 100.0);
 
         OptionalDouble avg = r.getAvgSatisfaction();
         if (avg.isPresent()) {
-            out.printf("Average Paid Customers' Satisfaction: %.2f%n", avg.getAsDouble());
+            out.printf("AVERAGE PAID CUSTOMERS' SATISFACTION: %.2f%n", avg.getAsDouble());
         } else {
-            out.println("Average Paid Customers' Satisfaction: N/A");
+            out.println("AVERAGE PAID CUSTOMERS' SATISFACTION: N/A");
         }
 
-        out.println("Turns Used: " + r.getTurn());
+        out.println("TURNS USED: " + r.getTurn());
     }
 
     public void showOutcome(GameOutcome o) {
         out.println("============== END OF GAME ==============");
         if (o == GameOutcome.VICTORY) {
             out.println("All 3 objectives were met.");
-            out.println("Outcome: VICTORY!");
+            out.println("FINAL OUTCOME: VICTORY!");
         } else {
             out.println("Not all objectives were met.");
-            out.println("Outcome: DEFEAT.");
+            out.println("FINAL OUTCOME: DEFEAT.");
         }
     }
 

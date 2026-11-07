@@ -67,15 +67,15 @@ public class ScriptedInput implements ManagerInput {
         8. staff tasks available
         */
         System.out.println("\n============== [SCRIPT] START TURN " + snap.getTurn() + " ==============");
-        System.out.printf("Revenue: $%.2f%n", snap.getRevenueCents() / 100.0);
+        System.out.printf("REVENUE: $%.2f%n", snap.getRevenueCents() / 100.0);
         OptionalDouble avg = snap.getAvgSatisfaction();
         if (avg.isPresent()) {
-            System.out.printf("Average Paid Customers' Satisfaction: %.2f%n", avg.getAsDouble());
+            System.out.printf("AVERAGE PAID CUSTOMERS' SATISFACTION: %.2f%n", avg.getAsDouble());
         } else {
-            System.out.println("Average Paid Customers' Satisfaction: N/A");
+            System.out.println("AVERAGE PAID CUSTOMERS' SATISFACTION: N/A");
         }
 
-        System.out.println("WAITING QUEUE (Top customer = Front of queue):");
+        System.out.println("WAITING QUEUE (TOP CUSTOMER = FRONT OF QUEUE):");
         List<Customer> q = snap.getQueue();
         if (q.isEmpty()) {
             System.out.println("No waiting customers.");
@@ -91,15 +91,15 @@ public class ScriptedInput implements ManagerInput {
             System.out.println("Table " + (i+1) + " - " + (tables.get(i).isFree() ? "FREE" : "OCCUPIED"));
         }
 
-        System.out.println("\n============== CUSTOMER STATUS ==============");
+        System.out.println("\n----EACH CUSTOMER'S SATISFACTION AND STATUS----");
         List<Customer> customers = snap.getCustomers();
         if (customers.isEmpty()) {
             System.out.println("No customers available.");
         } else {
             for (Customer customer : customers) {
                 System.out.println("\nCustomer #" + customer.getId());
-                System.out.println("Satisfaction: " + customer.getSatisfaction());
-                System.out.print("State: ");
+                System.out.println("SATISFACTION: " + customer.getSatisfaction());
+                System.out.print("STATE: ");
                 switch (customer.getState()) {
                     case WAITING_IN_QUEUE:
                         System.out.println("Waiting in queue");
@@ -126,8 +126,8 @@ public class ScriptedInput implements ManagerInput {
                         break;
                 }
                 if (customer.getOrder() != null) {
-                    System.out.println("Order Status: " + customer.getOrder().getStatus());
-                } else { System.out.println("Order Status: No order yet."); }
+                    System.out.println("ORDER STATUS: " + customer.getOrder().getStatus());
+                } else { System.out.println("ORDER STATUS: No order yet."); }
             }
         }
     }
@@ -142,22 +142,22 @@ public class ScriptedInput implements ManagerInput {
         5. turns used
         */
         System.out.println("\n============== [SCRIPT] END OF TURN " + r.getTurn() + " ==============");
-        System.out.println("Total Customers Served: " + r.getServedCount());
-        System.out.println("Total Unhappy Departures: " + r.getUnhappyDepartures());
-        System.out.printf("Revenue: $%.2f%n", r.getRevenueCents() / 100.0);
+        System.out.println("TOTAL CUSTOMERS SERVED: " + r.getServedCount());
+        System.out.println("TOTAL UNHAPPY DEPARTURES: " + r.getUnhappyDepartures());
+        System.out.printf("REVENUE: $%.2f%n", r.getRevenueCents() / 100.0);
 
         OptionalDouble avg = r.getAvgSatisfaction();
         if (avg.isPresent()) {
-            System.out.printf("Average Paid Customers' Satisfaction: %.2f%n", avg.getAsDouble());
+            System.out.printf("AVERAGE PAID CUSTOMERS' SATISFACTION: %.2f%n", avg.getAsDouble());
         } else {
-            System.out.println("Average Paid Customers' Satisfaction: N/A");
+            System.out.println("AVERAGE PAID CUSTOMERS' SATISFACTION: N/A");
         }
 
-        System.out.println("Turns Used: " + r.getTurn());
+        System.out.println("TURNS USED: " + r.getTurn());
     }
 
     public void showOutcome(GameOutcome o) {
-        System.out.println("[script] Final outcome: " + o);
+        System.out.println("[script] FINAL OUTCOME: " + o);
     }
 
     public void showMessage(String msg) {
