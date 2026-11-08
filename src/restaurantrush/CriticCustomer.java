@@ -47,10 +47,8 @@ public class CriticCustomer extends Customer {
         }
         boolean servedFast = getServedOnTurn() >= 0
                 && getServedOnTurn() - getArrivalTurn() <= 3;
-        if (servedFast) {
-            changeSatisfaction(10);
-        } else {
-            changeSatisfaction(-10);
+        int review = servedFast ? 10 : -10;
+        satisfaction = Math.max(0, Math.min(100, satisfaction + review));
         }
     }
 }
