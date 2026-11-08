@@ -18,9 +18,14 @@ public class ArrivalSchedule {
     }
 
     private Customer create(int id, int turn) {
-        return new RegularCustomer(id, turn);
+        if (turn == 4) {
+            return new VIPCustomer(id, turn);
+        } else if (turn == 7) {
+            return new CriticCustomer(id, turn);
+        } else {
+            return new RegularCustomer(id, turn);
+        }
     }
-
     public Optional<Customer> arrivingOn(int turn) {
         return Optional.ofNullable(arrivals.get(turn));
     }
