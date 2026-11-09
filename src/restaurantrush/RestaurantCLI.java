@@ -41,6 +41,25 @@ public class RestaurantCLI implements ManagerInput {
 
     }
 
+    @Override
+    public boolean confirmHappyHour(GameSnapshot snap) { // happy hour for stage 3
+        while (true) {
+            out.print("Activate Happy Hour? (Y/N): ");
+            if (in.hasNextLine()) {
+                throw new IllegalStateException("Input ended while confirming Happy Hour.");
+            }
+
+            String answer = in.nextLine().trim();
+            if (answer.equalsIgnoreCase("Y")) {
+                return true;
+            } else if (answer.equalsIgnoreCase("N")) {
+                return false;
+            }
+
+            out.println("Invalid choice. Please enter Y or N.");
+        }
+    }
+
     public void showTurnStart(GameSnapshot snap) {
         /* to display at START OF TURN:
         1. turn number

@@ -55,6 +55,22 @@ public class ScriptedInput implements ManagerInput {
         return selected;
     }
 
+    @Override 
+    public boolean confirmHappyHour(GameSnapshot snap) {
+        if (script.isEmpty()) {
+            throw new IllegalStateException("Script ran out of Happy Hour choices on turn " + snap.getTurn() + ".");
+        }
+
+        String answer = script.remove();
+        if (answer.equalsIgnoreCase("Y")) {
+            return true;
+        } else if (answer.equalsIgnoreCase("N")) {
+            return false;
+        }
+
+        throw new IllegalArgumentException("Invalid scripted Happy Hour choice: " + answer);
+    }
+
     public void showTurnStart(GameSnapshot snap) {
         /* to display at START OF TURN:
         1. turn number
