@@ -1,0 +1,44 @@
+# Stage 2 victory run: VIP on turn 4, Critic on turn 7
+# Turn 1
+1
+# Turn 2
+1
+1
+# Turn 3
+1
+# Turn 4 (seat the VIP)
+1
+# Turn 5
+1
+1
+# Turn 6
+1
+# Turn 7 (seat the Critic)
+1
+# Turn 8
+1
+1
+# Turn 9 (Waiter has nothing to do, Chef only)
+1
+# Turn 10 (serve the Critic within 3 turns, so +10 review)
+2
+# Turn 11
+1
+# Turn 12
+1
+1
+# Turn 13 (serve #4 instead of seating #5)
+2
+# Turn 14
+1
+# Turn 15
+1
+1
+# Turn 16
+1
+1
+# Turn 17 (serve #5 instead of taking #6's order)
+2
+# Turn 18
+1
+1
