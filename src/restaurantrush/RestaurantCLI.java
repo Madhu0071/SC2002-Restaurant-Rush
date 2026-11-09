@@ -67,7 +67,7 @@ public class RestaurantCLI implements ManagerInput {
             out.println("No waiting customers.");
         } else {
             for (Customer customer : q) {
-                out.println("Customer #" + customer.getId());
+                out.println("Customer #" + customer.getId() + " (" + customer.getClass().getSimpleName() + ")");
             }
         }
 
@@ -83,7 +83,7 @@ public class RestaurantCLI implements ManagerInput {
             out.println("No customers available.");
         } else {
             for (Customer customer : customers) {
-                out.println("\nCustomer #" + customer.getId());
+                out.println("\nCustomer #" + customer.getId() + " (" + customer.getClass().getSimpleName() + ")");
                 out.println("SATISFACTION: " + customer.getSatisfaction());
                 out.print("STATE: ");
                 switch (customer.getState()) {

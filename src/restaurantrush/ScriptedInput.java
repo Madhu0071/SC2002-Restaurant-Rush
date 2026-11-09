@@ -81,7 +81,7 @@ public class ScriptedInput implements ManagerInput {
             System.out.println("No waiting customers.");
         } else {
             for (Customer customer : q) {
-                System.out.println("Customer #" + customer.getId());
+                System.out.println("Customer #" + customer.getId() + " (" + customer.getClass().getSimpleName() + ")");
             }
         }
 
@@ -97,7 +97,7 @@ public class ScriptedInput implements ManagerInput {
             System.out.println("No customers available.");
         } else {
             for (Customer customer : customers) {
-                System.out.println("\nCustomer #" + customer.getId());
+                System.out.println("\nCustomer #" + customer.getId() + " (" + customer.getClass().getSimpleName() + ")");
                 System.out.println("SATISFACTION: " + customer.getSatisfaction());
                 System.out.print("STATE: ");
                 switch (customer.getState()) {
