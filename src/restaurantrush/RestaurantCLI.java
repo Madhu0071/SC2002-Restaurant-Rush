@@ -35,7 +35,7 @@ public class RestaurantCLI implements ManagerInput {
                 } else if (choice >= 1 && choice <= opts.size()) {
                     return opts.get(choice - 1);
                 }
-            } catch (NumberFormatException e) {} // displays error message below and asks for input again
+            } catch (NumberFormatException e) {} 
             out.println("Invalid choice. Enter a number from 0 to " + opts.size() + ".");
         }
 

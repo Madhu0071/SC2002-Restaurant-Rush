@@ -16,7 +16,7 @@ public abstract class Customer {
         this.arrivalTurn = arrivalTurn;
         this.satisfaction = 100;
         this.state = CustomerState.WAITING_IN_QUEUE;
-        this.servedOnTurn = -1;   // -1 = not served yet
+        this.servedOnTurn = -1;  
         this.order = null;
     }
 
