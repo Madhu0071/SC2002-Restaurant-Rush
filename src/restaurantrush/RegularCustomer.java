@@ -1,6 +1,5 @@
 package restaurantrush;
 
-/** A regular customer: loses 8 satisfaction per waiting turn, pays full price. */
 public class RegularCustomer extends Customer {
 
     public RegularCustomer(int id, int arrivalTurn) {

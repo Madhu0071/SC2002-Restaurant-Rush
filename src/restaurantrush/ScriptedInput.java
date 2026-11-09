@@ -24,7 +24,7 @@ public class ScriptedInput implements ManagerInput {
                 }
             }
         } catch (IOException e) {
-            throw new IllegalArgumentException("Cannot read script file: " + file, e); // for missing file, or unable to open
+            throw new IllegalArgumentException("Cannot read script file: " + file, e); 
         }
     }
 
@@ -40,7 +40,7 @@ public class ScriptedInput implements ManagerInput {
 
         int choice;
         try {
-            choice = Integer.parseInt(answer); // checks if answer is integer
+            choice = Integer.parseInt(answer);
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException("Invalid script action: " + answer, e);
         }
