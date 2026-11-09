@@ -37,6 +37,7 @@ public class Cashier extends Staff {
             r.recordPayment(oldestCustomer, priceCents);
             oldestCustomer.markPaid();
             oldestCustomer.getOrder().markPaid();
+            oldestCustomer.onPaid(oldestCustomer.getOrder());
             Table table = r.tableOf(oldestCustomer);
             table.release();
             return Optional.of(oldestCustomer);
