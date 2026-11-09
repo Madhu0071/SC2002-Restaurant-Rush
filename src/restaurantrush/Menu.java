@@ -4,14 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Menu {
-    private List<MenuItem> items; // List<MenuItem> instead of List<Dish> add future meals like ComboMeal
+    private List<MenuItem> items; 
 
-    // Constructor for an empty Menu
     public Menu() {
         items = new ArrayList<>();
     }
 
-    // Constructor for a Menu with existing items
     public Menu(List<MenuItem> items) {
         this.items = new ArrayList<>(items);
     }

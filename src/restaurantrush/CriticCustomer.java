@@ -2,10 +2,6 @@ package restaurantrush;
 
 import java.util.List;
 
-/**
- * Order preference: always orders the most expensive item on the menu. If
- * two items share the top price, the one listed first on the menu is chosen.
- */
 public class CriticCustomer extends Customer {
 
     public CriticCustomer(int id, int arrivalTurn) {
