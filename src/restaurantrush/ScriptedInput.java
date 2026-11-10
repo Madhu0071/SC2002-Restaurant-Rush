@@ -91,6 +91,8 @@ public class ScriptedInput implements ManagerInput {
             System.out.println("AVERAGE PAID CUSTOMERS' SATISFACTION: N/A");
         }
 
+        System.out.println("HAPPY HOUR TURNS REMAINING: " + snap.getHappyHourRemaining());
+
         System.out.println("WAITING QUEUE (TOP CUSTOMER = FRONT OF QUEUE):");
         List<Customer> q = snap.getQueue();
         if (q.isEmpty()) {

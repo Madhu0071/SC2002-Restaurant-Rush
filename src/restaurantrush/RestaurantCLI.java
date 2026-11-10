@@ -80,6 +80,8 @@ public class RestaurantCLI implements ManagerInput {
             out.println("AVERAGE PAID CUSTOMERS' SATISFACTION: N/A");
         }
 
+        out.println("HAPPY HOUR TURNS REMAINING: " + snap.getHappyHourRemaining());
+
         out.println("WAITING QUEUE (TOP CUSTOMER = FRONT OF QUEUE):");
         List<Customer> q = snap.getQueue();
         if (q.isEmpty()) {
