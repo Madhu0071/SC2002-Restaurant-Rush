@@ -12,16 +12,17 @@ public class GameSnapshot {
     private List<Customer> queue;
     private List<Table> tables;
     private List<Customer> customers;
-    
+    private int happyHourRemaining;
+
     public GameSnapshot(int turn, int revenueCents, OptionalDouble avgSatisfaction, List<Customer> queue,
-                        List<Table> tables, List<Customer> customers) {
+                        List<Table> tables, List<Customer> customers, int happyHourRemaining) {
         this.turn = turn;
         this.revenueCents = revenueCents;
         this.avgSatisfaction = avgSatisfaction;
         this.queue = Collections.unmodifiableList(new ArrayList<>(queue));
         this.tables = Collections.unmodifiableList(new ArrayList<>(tables));
         this.customers = Collections.unmodifiableList(new ArrayList<>(customers));
-        
+        this.happyHourRemaining = happyHourRemaining;
     }
 
     public int getTurn() {
@@ -48,4 +49,7 @@ public class GameSnapshot {
         return customers;
     }
 
+    public int getHappyHourRemaining() {
+        return happyHourRemaining;
+    }
 }

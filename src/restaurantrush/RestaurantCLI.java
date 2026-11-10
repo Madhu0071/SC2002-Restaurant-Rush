@@ -45,7 +45,7 @@ public class RestaurantCLI implements ManagerInput {
     public boolean confirmHappyHour(GameSnapshot snap) { // happy hour for stage 3
         while (true) {
             out.print("Activate Happy Hour? (Y/N): ");
-            if (in.hasNextLine()) {
+            if (!in.hasNextLine()) {
                 throw new IllegalStateException("Input ended while confirming Happy Hour.");
             }
 
