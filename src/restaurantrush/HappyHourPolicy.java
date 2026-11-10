@@ -22,6 +22,10 @@ public class HappyHourPolicy implements PromotionPolicy {
         return turnsRemaining;
     }
 
+    public int getTurnsRemaining(int turn) {
+        return used ? Math.max(0, activationTurn + 2 - turn) : 0;
+    }
+
     public boolean isUsed() {
         return used;
     }

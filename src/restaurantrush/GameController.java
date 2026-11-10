@@ -84,6 +84,11 @@ public class GameController {
         for (PromotionPolicy p : policies) {
             p.onTurnStart(turn, restaurant);
         }
+        if (happyHour.getTurnsRemaining(turn) > 0) {
+            input.showMessage("Happy Hour: waiting and seated customers recover 15 satisfaction. Turns left: "
+                    + happyHour.getTurnsRemaining(turn));
+        }
+
     }
 
     private void managerChoices() {
@@ -159,6 +164,6 @@ public class GameController {
     public GameSnapshot snapshot() {
         return new GameSnapshot(turn, restaurant.getRevenueCents(), restaurant.averageSatisfaction(),
                 restaurant.getQueue(), restaurant.getTables(), restaurant.getCustomers(),
-                happyHour.getTurnsRemaining());
+                happyHour.getTurnsRemaining(turn));
     }
 }
