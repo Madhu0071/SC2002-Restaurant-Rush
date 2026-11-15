@@ -32,9 +32,9 @@ https://drive.google.com/file/d/1yOZR8hCqLyde42ZEW-sXQ0B9QvpuzyLF/view?usp=drive
 |---|---|---|
 | 0:07 | Game launching from the project | Coleman |
 | 0:56 | Meaningful manager choices, including a decision where staff are constrained |Coleman|
-| 2:35 | A dish going from READY to SERVED to payment | Dillon |
+| 2:35 | A dish going from READY to SERVED to payment | Coleman |
 | 3:45 | A VIP / Critic behaviour | Dillon |
-| 5:33 | A Stage 3 feature | Jian Hern |
+| 5:33 | A Stage 3 feature | Dillon |
 | 8:18 | One victory and one defeat (separate reproducible runs) | Jian Hern |
 | 9:22 | Stage tag comparisons | Jian Hern |
 | 10:36 | Diagrams | Tanieshka |
