@@ -22,9 +22,9 @@ https://drive.google.com/file/d/1yOZR8hCqLyde42ZEW-sXQ0B9QvpuzyLF/view?usp=drive
 | Member | Stage 1 | Stage 2 | Stage 3 |
 |---|---|---|---|
 | Karthikeyan Madhumitha | Game loop, Restaurant, Table, ArrivalSchedule, ObjectiveEvaluator; repo setup and stage-1 tag | VIP and Critic arrivals in ArrivalSchedule; found and fixed the Critic review bug; stage-2 tag | GameController changes for Host, combos and Happy Hour; Happy Hour turns-left fix; test scripts; stage-3 tag |
-| Coleman Tng Cheng Kai | [e.g. ManagerInput, RestaurantCLI, ScriptedInput, Menu, Dish] | [e.g. show customer type] | [e.g. ComboMeal, Happy Hour prompt and display] |
-| Lam Jian Hern | [e.g. Customer, RegularCustomer, PricingService] | [e.g. VIPCustomer, CriticCustomer, Customer hooks] | [e.g. PromotionPolicy, HappyHourPolicy, PricingService.addPolicy] |
-| Ho Jun De Dillon Trevor  | [e.g. Staff, Waiter, Chef, Cashier, StaffActions, Order] | [e.g. Cashier onPaid order] | [e.g. Host] |
+| Coleman Tng Cheng Kai | ManagerInput, RestaurantCLI, ScriptedInput, Menu, Dish | show customer type | ComboMeal, Happy Hour prompt and display |
+| Lam Jian Hern | Customer, RegularCustomer, PricingService | VIPCustomer, CriticCustomer, Customer hooks | PromotionPolicy, HappyHourPolicy, PricingService.addPolicy |
+| Ho Jun De Dillon Trevor  | Staff, Waiter, Chef, Cashier, StaffActions, Order | Cashier onPaid order | Host |
 | Tanieshka Amol Pawar | Stage 1 class diagram | Stage 2 class diagram | Stage 3 class diagram and sequence diagram |
 
 
