@@ -14,7 +14,6 @@ and keep customers happy enough to pay.
 | Stage 1 → 2 changes | https://github.com/Madhu0071/SC2002-Restaurant-Rushn/compare/stage-1...stage-2 |
 | Stage 2 → 3 changes | https://github.com/Madhu0071/SC2002-Restaurant-Rushn/compare/stage-2...stage-3 |
 | Presentation video | https://drive.google.com/file/d/1yOZR8hCqLyde42ZEW-sXQ0B9QvpuzyLF/view?usp=drive_link |
-| Group report | [docs/report.pdf](docs/report.pdf) |
 
 ## Presentation video
 https://drive.google.com/file/d/1yOZR8hCqLyde42ZEW-sXQ0B9QvpuzyLF/view?usp=drive_link
