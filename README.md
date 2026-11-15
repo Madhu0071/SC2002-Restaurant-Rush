@@ -13,10 +13,10 @@ and keep customers happy enough to pay.
 | Stage 3 code | https://github.com/Madhu0071/SC2002-Restaurant-Rush/tree/stage-3 |
 | Stage 1 → 2 changes | https://github.com/Madhu0071/SC2002-Restaurant-Rush/compare/stage-1...stage-2 |
 | Stage 2 → 3 changes | https://github.com/Madhu0071/SC2002-Restaurant-Rush/compare/stage-2...stage-3 |
-| Presentation video | https://drive.google.com/file/d/1yOZR8hCqLyde42ZEW-sXQ0B9QvpuzyLF/view?usp=drive_link |
+| Presentation video | https://drive.google.com/file/d/11oNDaXud-eEpGPol0vRnH0APVza-X-6T/view?usp=drive_link |
 
 ## Presentation video
-https://drive.google.com/file/d/1yOZR8hCqLyde42ZEW-sXQ0B9QvpuzyLF/view?usp=drive_link
+https://drive.google.com/file/d/11oNDaXud-eEpGPol0vRnH0APVza-X-6T/view?usp=drive_link
 
 ### Contributions by stage
 | Member | Stage 1 | Stage 2 | Stage 3 |
@@ -36,7 +36,7 @@ https://drive.google.com/file/d/1yOZR8hCqLyde42ZEW-sXQ0B9QvpuzyLF/view?usp=drive
 | 3:45 | A VIP / Critic behaviour | Dillon |
 | 5:33 | A Stage 3 feature | Dillon |
 | 8:18 | One victory and one defeat (separate reproducible runs) | Jian Hern |
-| 9:22 | Stage tag comparisons | Jian Hern |
+| 9:22 | Stage tag comparisons | Karthikeyan Madhumitha |
 | 10:36 | Diagrams | Tanieshka |
 
 ## How to compile and run
