@@ -1,4 +1,4 @@
-# SC2002-Restaurant-Rushn
+# SC2002-Restaurant-Rush
 # Restaurant Rush
 
 SC2002 group project: a turn-based restaurant management game played in the terminal.
@@ -8,11 +8,11 @@ and keep customers happy enough to pay.
 ## Quick links
 | | Link |
 |---|---|
-| Stage 1 code | https://github.com/Madhu0071/SC2002-Restaurant-Rushn/tree/stage-1 |
-| Stage 2 code | https://github.com/Madhu0071/SC2002-Restaurant-Rushn/tree/stage-2 |
-| Stage 3 code | https://github.com/Madhu0071/SC2002-Restaurant-Rushn/tree/stage-3 |
-| Stage 1 → 2 changes | https://github.com/Madhu0071/SC2002-Restaurant-Rushn/compare/stage-1...stage-2 |
-| Stage 2 → 3 changes | https://github.com/Madhu0071/SC2002-Restaurant-Rushn/compare/stage-2...stage-3 |
+| Stage 1 code | https://github.com/Madhu0071/SC2002-Restaurant-Rush/tree/stage-1 |
+| Stage 2 code | https://github.com/Madhu0071/SC2002-Restaurant-Rush/tree/stage-2 |
+| Stage 3 code | https://github.com/Madhu0071/SC2002-Restaurant-Rush/tree/stage-3 |
+| Stage 1 → 2 changes | https://github.com/Madhu0071/SC2002-Restaurant-Rush/compare/stage-1...stage-2 |
+| Stage 2 → 3 changes | https://github.com/Madhu0071/SC2002-Restaurant-Rush/compare/stage-2...stage-3 |
 | Presentation video | https://drive.google.com/file/d/1yOZR8hCqLyde42ZEW-sXQ0B9QvpuzyLF/view?usp=drive_link |
 
 ## Presentation video
